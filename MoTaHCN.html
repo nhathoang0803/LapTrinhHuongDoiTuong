@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3;"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.rect(100, 10, 200, 100);
+        context.strokeStyle = "#642e43";
+        context.stroke();
+    let Rectangle = function (a, b) {
+
+        this.getWidth = function () {
+            return a;
+        }
+        this.getLength = function () {
+            return b;
+        }
+        this.getPerimeter = function () {
+            return (a + b) * 2;
+        }
+        this.getArea = function () {
+            return a * b;
+        }
+    };
+    let c = new Rectangle(2, 5);
+    alert("Radius : " + c.getPerimeter() + " ; area : " +c.getArea());
+    </script>
+</body>
+</html>
